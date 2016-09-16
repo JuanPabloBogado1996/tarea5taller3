@@ -1,0 +1,52 @@
+
+JuanPabloBogado
+
+
+
+Crear un repositorio con un archivo README.md
+y contestar las siguientes preguntas:
+Â¿Que es bootstrap?
+Bootstrap, es un framework originalmente creado por Twitter, que permite crear interfaces web con CSS y JavaScript, cuya particularidad es la de adaptar la interfaz del sitio web al tamaño del dispositivo en que se visualice. Es decir, el sitio web se adapta automáticamente al tamaño de una PC, una Tablet u otro dispositivo. Esta técnica de diseño y desarrollo se conoce como “responsive design” o diseño adaptativo.
+Â¿Que es CSS?
+CSS es un lenguaje de hojas de estilos creado para controlar el aspecto o presentación de los documentos electrónicos definidos con HTML y XHTML. CSS es la mejor forma de separar los contenidos y su presentación y es imprescindible para crear páginas web complejas.
+Ejemplo:
+<p style="color:green;font-weight:bold">El párrafo saldrá con color verde y en negrita</p>
+Dentro del atributo style se deben indicar los atributos de estilos CSS separados por punto y coma (;).
+Color: indica el color del contenido la etiqueta donde estemos utilizándolo, generalmente indica el color del texto. 
+Font-weight: indica el grosor del texto. Bold sirve para poner en negrita.
+Â¿Que es Componet CSS? Ejemplos
+Component CSS no es más que esa estrategia. Es tan necesaria, que hace de un código incierto una estructura que se entenderá y mantendrá por todos los que tengan claro el concepto. Es decir, un flujo de trabajo para el día a día.
+Ahora cualquiera puede crear su propia etiqueta y marcar de forma más semántica y sencilla lo que de otro modo sería, muy probablemente, una sopa de divs. Ejemplo:
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map_canvas {
+        width: 500px;
+        height: 400px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map_canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(44.5403, -78.5463),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+    <div id="map_canvas"></div>
+  </body>
+</html>
+Con Web Components, ese tocho puede convertirse en simplemente esto:
+
+<google-map latitude="37.77493" longitude="-122.41942"></google-map>
+Â¿Que son preprocesadores CSS? Ejemplos
+Un preprocesador de CSS es una herramienta que nos permite escribir pseudo-código CSS que luego será convertido a CSS real. Ese pseudo-código se conforma de variables, condiciones, bucles o funciones. Podríamos decir que tenemos un lenguaje de programación que genera CSS.
+El objetivo de estos preprocesadores es tener un código más sencillo de mantener y editar.
